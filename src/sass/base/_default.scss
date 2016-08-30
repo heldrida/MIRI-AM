@@ -1,6 +1,37 @@
-h6 {
-  font-size: 30px;
-  color: #fff;
-  letter-spacing: 2px;
-  line-height: 38px;
+body {
+	background-color: $cosmicLatte;
+}
+h1 {
+	color: $brinkPink;	
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 4vw;
+	letter-spacing: 0.1vw;
+}
+h2 {
+	color: $blackCoral;	
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 2vw;
+	letter-spacing: 0.1vw;
+	line-height: 3vw;
+}
+a {
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 2vw;
+	letter-spacing: 0.2vw;	
+	line-height: 3vw;
+}
+p {
+	color: $blackCoral;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 1vw;
+	letter-spacing: 0.2vw;
+	line-height: 2vw;
+}
+li {
+	color: $blackCoral;	
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 2vw;
+	letter-spacing: 0.1vw;	
+	line-height: 3vw;
+	display: block;
 }
