@@ -1,0 +1,61 @@
+.home-content {
+  .wrapper {
+    margin: 0 90px;
+    max-width: 1200px;
+    .logo-home {
+      height: 60vh;
+      vertical-align: bottom;
+      position: relative;
+      .logo-container {
+        margin-bottom: 60px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .yellow-hello {
+      width: calc(100% - 180px);
+      max-width: 1200px;
+      height: 60vh;
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+      .block {
+        background-color: $yellow;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .projects {
+    margin-top: 280px;
+    .thumb2 {
+      text-align: right;
+      .block {
+
+      }
+    }
+  }
+  .studio {
+    background-color: $darkGrey;
+    min-height: 600px;
+    padding: 60px 90px 0 90px;
+    .text {
+      font-family: 'Larsseit';
+      font-weight: 100;
+      font-size: 28px;
+      color: #fff;
+      max-width: 60%;
+      line-height: 50px;
+    }
+    .studio1 {
+      display: block;
+      margin-left: 40%;
+      margin-top: 60px;
+      width: 60%;
+    }
+    .studio2 {
+      display: block;
+      width: 60%;
+    }
+  }
+}

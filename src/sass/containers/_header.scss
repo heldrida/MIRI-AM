@@ -1,0 +1,97 @@
+header {
+  width: calc(100% - 180px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 90px 20px;
+  z-index: 999;
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    .col {
+      vertical-align: middle;
+      width: 50%;
+      display: inline-block;
+    }
+    .col-l {
+      .logo-container {
+        cursor: pointer;
+      }
+    }
+    .col-r {
+      text-align: right;
+    }
+  }
+}
+
+.logo-container {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  position: relative;
+  .images {
+    width: 180px;
+    height: 52px;
+    display: inline-block;
+    position: relative;
+    img {
+      position: absolute;
+    }
+    .signature {
+      top: 0;
+      left: 0;
+    }
+    .abstract {
+      top: 0;
+      right: 0;
+    }
+  }
+  .title {
+    font-family: 'Larsseit';
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 1.77px;
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  .logo-container {
+    padding-top: 20px;
+  }
+}
+
+.top-block-particle {
+  background-color: $yellow;
+  width: auto;
+  height: 314px;
+}
+
+.tr-menu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+  position: relative;
+  z-index: 1000;
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #E4E4E4;
+    transition: all 0.1s;
+    pointer-events: none;
+  }
+  &:hover {
+    @include transform(translateY(-2px));
+    position: relative;
+    span {
+      &:nth-child(2) {
+        margin: 7px 0;
+      }
+    }
+  }
+}
