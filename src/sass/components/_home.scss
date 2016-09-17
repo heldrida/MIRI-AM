@@ -1,35 +1,55 @@
 .home {
 	text-align: center;
+	margin: 0 auto;
+
 	.logo {
 		width: 30vw;
 		height: auto;
 	}
 	img {
-		margin: 40px;
-	}
-	h1 {
-		color: $brown2;
-		font-size: 6vw;
+		margin: 3vw;
+		max-width: 300px;
 	}
 	p {
-		color: #000;
-		font-size: 2vw;
+	    font-family: 'Baloo Bhaina', cursive;
+	    letter-spacing: 0.1vw;
+		color: $green;
+		font-size: 6vw;
+		line-height: 7.6vw;
+		padding: 10px 40px;
+		span {
+			&:nth-child(1) {
+				color: $red;
+				font-size: 8vw;
+			}
+			&:nth-child(2) {
+				color: $brown1;
+			}
+			&:nth-child(3) {
+				color: $yellow1;
+				font-size: 7.5vw;
+			}
+			&:last-child {
+				color: $green;
+				font-size: 8vw;
+			}
+		}
 	}
 	.cta {
 		background: $yellow2;
-		padding: 20px;
-		border: 6px solid $brown2;
-		font-size: 2vw;
-		color: $brown2;
+		padding: 30px;
+		border: 6px solid #000;
+		font-size: 4.5vw;
+		color: #000;
 		font-weight: bold;
 		border-radius: 15px;
 		cursor: pointer;
 		text-decoration: none;
+		display: inline-block;
+		width: 42vw;
 		@include transition(all 0.3s);
 		&:hover {
-			color: $yellow2;
-			background: $brown2;
-			border-color: $yellow2;
+			background: $green;
 		}
 	}
 }
