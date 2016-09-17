@@ -24,7 +24,7 @@ class App extends Component {
 	}
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
 	return {
 		questions: state.questions
 	}
@@ -35,5 +35,12 @@ function matchDispatchToProps(dispatch) {
 		fetchQuestions: fetchQuestions
 	}, dispatch);
 }
+
+App.propTypes = { 
+	fetchQuestions: React.PropTypes.func,
+	questions: React.PropTypes.object,
+	children: React.PropTypes.object
+};
+
 
 export default connect(mapStateToProps, matchDispatchToProps)(App);
