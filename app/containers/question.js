@@ -28,6 +28,8 @@ class Question extends Component {
 		this.props.setQuestionAnswer(question_id, answer_id);
 		if (question_id === this.props.questions.list.length) {
 			browserHistory.push('/result');
+		} else {
+			browserHistory.push('/question/' + (question_id + 1));
 		}
 	}
 
