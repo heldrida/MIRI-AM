@@ -1,52 +1,55 @@
 .home {
 	text-align: center;
 	margin: 0 auto;
+	max-width: 768px;
+	width: 85vw;
 
 	.logo {
-		width: 30vw;
+		width: 14rem;
 		height: auto;
 	}
 	img {
-		margin: 3vw;
+		margin: 1rem;
 		max-width: 300px;
 	}
 	p {
 	    font-family: 'Baloo Bhaina', cursive;
-	    letter-spacing: 0.1vw;
+	    letter-spacing: 0.04rem;
 		color: $green;
-		font-size: 6vw;
-		line-height: 7.6vw;
-		padding: 10px 40px;
+		font-size: 4.2rem;
+		line-height: 4.4rem;
+		padding: 10px 0;
+
 		span {
 			&:nth-child(1) {
 				color: $red;
-				font-size: 8vw;
+				font-size: 5rem;
 			}
 			&:nth-child(2) {
 				color: $brown1;
 			}
 			&:nth-child(3) {
 				color: $yellow1;
-				font-size: 7.5vw;
+				font-size: 5rem;
 			}
 			&:last-child {
 				color: $green;
-				font-size: 8vw;
+				font-size: 5rem;
 			}
 		}
 	}
 	.cta {
 		background: $yellow2;
-		padding: 30px;
-		border: 6px solid #000;
-		font-size: 4.5vw;
+		padding: 1.8rem;
+		border: 0.44rem solid #000;
+		font-size: 2rem;
 		color: #000;
 		font-weight: bold;
-		border-radius: 15px;
+		border-radius: 2rem;
 		cursor: pointer;
 		text-decoration: none;
 		display: inline-block;
-		width: 42vw;
+		width: 20rem;
 		@include transition(all 0.3s);
 		&:hover {
 			background: $green;
