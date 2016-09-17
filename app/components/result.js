@@ -2,14 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const getFruitPanel = (score) => {
-	console.log(score);
 	let tmpl;
 	switch(score) {
 		case 1:
 			const avocado = require('../../src/images/avocado.png');
 			tmpl = (
 				<div className='avocado'>
-					<h3>Avocado</h3>
+					<h3>Mir'iam find out that avocado may help you!</h3>
 					<img src={ avocado } />
 				</div>
 			);
@@ -18,7 +17,7 @@ const getFruitPanel = (score) => {
 			const orange = require('../../src/images/orange.png');
 			tmpl = (
 				<div className='avocado'>
-					<h3>Orange</h3>
+					<h3>Mir'iam find out that Orange may help!</h3>
 					<img src={ orange } />
 				</div>
 			);
@@ -27,7 +26,7 @@ const getFruitPanel = (score) => {
 			const strawberry = require('../../src/images/strawberry.png');
 			tmpl = (
 				<div className='avocado'>
-					<h3>Strawberry</h3>
+					<h3>Mir'iam find out that strawberry may help!</h3>
 					<img src={ strawberry } />
 				</div>
 			);
@@ -36,7 +35,7 @@ const getFruitPanel = (score) => {
 			const blueberries = require('../../src/images/blueberries.png');
 			tmpl = (
 				<div className='avocado'>
-					<h3>blueberries</h3>
+					<h3>Mir'iam find out that blueberries may help!</h3>
 					<img src={ blueberries } />
 				</div>
 			);
@@ -52,9 +51,17 @@ const calcScore = (answers) => {
 	return Math.ceil(avg / answers.length);
 }
 
-const Result = ({ answers }) => (
-	<div>result { getFruitPanel(calcScore(answers)) }</div>
-);
+const Result = ({ answers }) => {
+	const score = calcScore(answers);
+
+	return (
+		<div className={ 'result' + ' ' + 'score-' + score }>
+			{ 
+				getFruitPanel(score) 
+			}
+		</div>
+	);
+};
 
 function mapStateToProps(state) {
 	return {

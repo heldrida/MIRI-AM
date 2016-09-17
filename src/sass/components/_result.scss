@@ -1,0 +1,38 @@
+.result {
+	text-align: center;
+	margin: 3rem;
+
+	h3 {
+		color: $brown2;
+		font-size: 3rem;
+		letter-spacing: 0.02rem;
+		line-height: 3.2rem;
+		font-family: 'Baloo Bhaina', cursive;
+		max-width: 30rem;
+		display: inline-block;
+	}
+	img {
+		width: 20rem;
+		margin: 1.75rem;
+	}
+	&.score-4 {
+		h3 {
+			color: $colorStep4;
+		}
+	}
+	&.score-3 {
+		h3 {
+			color: $colorStep3;
+		}
+	}
+	&.score-2 {
+		h3 {
+			color: $colorStep2;
+		}
+	}
+	&.score-1 {
+		h3 {
+			color: $colorStep1;
+		}
+	}
+}
