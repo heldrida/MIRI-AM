@@ -1,0 +1,35 @@
+.home {
+	text-align: center;
+	.logo {
+		width: 30vw;
+		height: auto;
+	}
+	img {
+		margin: 40px;
+	}
+	h1 {
+		color: $brown2;
+		font-size: 6vw;
+	}
+	p {
+		color: #000;
+		font-size: 2vw;
+	}
+	.cta {
+		background: $yellow2;
+		padding: 20px;
+		border: 6px solid $brown2;
+		font-size: 2vw;
+		color: $brown2;
+		font-weight: bold;
+		border-radius: 15px;
+		cursor: pointer;
+		text-decoration: none;
+		@include transition(all 0.3s);
+		&:hover {
+			color: $yellow2;
+			background: $brown2;
+			border-color: $yellow2;
+		}
+	}
+}
