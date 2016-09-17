@@ -79,7 +79,6 @@ class Question extends Component {
 					}
 					</ul>
 				</div>
-				<Navbar />
 			</div>
 		);
 	}
