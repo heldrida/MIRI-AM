@@ -5,6 +5,7 @@ import { setActiveQuestion, setQuestionAnswer } from '../actions/index';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router';
 import Navbar from '../containers/navbar';
+import { browserHistory } from 'react-router';
 
 class Question extends Component {
 	constructor(props) {
@@ -25,6 +26,9 @@ class Question extends Component {
 	setAnswer(answer_id) {
 		let question_id = this.props.question.id;
 		this.props.setQuestionAnswer(question_id, answer_id);
+		if (question_id === this.props.questions.list.length) {
+			browserHistory.push('/result');
+		}
 	}
 
 	getClassName(answers, item_answer_id) {
@@ -43,30 +47,12 @@ class Question extends Component {
 
 		let answer = answers[answer_index];
 
-		// Test cases
-		const isUserCorrect = () => {
-			return answer.answer_id == answer.correct_answer_id && item_answer_id == answer.correct_answer_id
-		}
-
 		const isUserAnswer = () => {
 			return answer.answer_id === item_answer_id;
 		}
 
-		const isCorrectAnswer = () => {
-			return item_answer_id == answer.correct_answer_id;
-		}
-
-		// Test and set the correct case classname for styling
-		if (isUserCorrect()) {
-			classes.push('user_correct_answer');
-		}
-
 		if (isUserAnswer()) {
 			classes.push('user_answer');
-		}
-
-		if (isCorrectAnswer()) {
-			classes.push('correct_answer');
 		}
 
 		return classes.length > 0 ? classes.join(' ') : '';
@@ -101,6 +87,7 @@ function mapStateToProps(state, ownProps) {
 	return {
 		question_id: ownProps.params.question_id,
 		question: state.questions.active,
+		questions: state.questions,
 		answers: state.answers
 	}
 }

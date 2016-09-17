@@ -36,6 +36,7 @@
     "react-dom": "^15.0.1",
     "react-router": "^2.3.0",
     "react-router-redux": "^4.0.5",
+    "redux-thunk": "^2.1.0",
     "scrollmagic": "^2.0.5"
   }
 }

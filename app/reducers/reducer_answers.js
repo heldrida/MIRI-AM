@@ -1,8 +1,6 @@
 import { SET_QUESTION_ANSWER } from '../actions/index';
 import _ from 'lodash';
 
-console.log("SET_QUESTION_ANSWER", SET_QUESTION_ANSWER);
-
 const INITIAL_STATE = [];
 
 export default function(state = INITIAL_STATE, action) {
@@ -23,8 +21,7 @@ export default function(state = INITIAL_STATE, action) {
 
 			return [{
 				question_id: action.payload.question_id,
-				answer_id: action.payload.answer_id,
-				correct_answer_id: action.payload.correct_answer_id
+				answer_id: action.payload.answer_id
 			}, ...state];
 
 		break;

@@ -6,10 +6,12 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import routes from './config/routes';
 import reducers from './reducers';
-import promise from 'redux-promise';
+import thunk from 'redux-thunk';
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStore(
+  reducers,
+  applyMiddleware(thunk)
+);
 const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
