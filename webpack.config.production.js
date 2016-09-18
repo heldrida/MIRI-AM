@@ -22,6 +22,11 @@ module.exports = {
 		warnings: false
 	  }
 	}),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
 	new HtmlWebpackPlugin({
 		inject: true,
 		template: __dirname + '/build/' + 'index.html',
