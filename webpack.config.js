@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -19,6 +20,11 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			inject: true,
+			template: __dirname + '/app/' + 'index.html',
+			filename: 'index.html'
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin()
 	]
