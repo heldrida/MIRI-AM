@@ -24,10 +24,12 @@
 		letter-spacing: 0.02rem;
 		margin-bottom: 1rem;
 		font-weight: bold;
-		@include transition(all 0.3s);
-		&:hover {
-			color: $green;
-			@include transform(translateX(1%));
+		.hover & {
+			@include transition(all 0.3s);
+			&:hover {
+				color: $green;
+				@include transform(translateX(1%));
+			}
 		}
 	}
 }

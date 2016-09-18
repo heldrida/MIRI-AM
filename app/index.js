@@ -1,3 +1,6 @@
+// fix sticky hover in touch devices
+document.documentElement.className = 'ontouchstart' in document.documentElement ? '' : 'hover';
+
 import React from 'react';
 import ReactDOM from "react-dom";
 import { Router, browserHistory } from 'react-router';
