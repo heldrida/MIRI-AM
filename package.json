@@ -4,8 +4,7 @@
   "description": "",
   "main": "app/index.js",
   "scripts": {
-    "build": "gulp build",
-    "start": "webpack --config ./webpack.config.production.js --progress --colors & node ./server.js --history-api-fallback"
+    "start": "gulp build && webpack --config ./webpack.config.production.js --progress --colors & node ./server.js --history-api-fallback"
   },
   "author": "Helder C.",
   "license": "ISC",
