@@ -12,10 +12,28 @@ class App extends Component {
 		this.props.fetchQuestions();
 	}
 
+	cacheModule() {
+		const avocado = require('../../src/images/avocado.png')
+		const orange = require('../../src/images/orange.png')
+		const strawberry = require('../../src/images/strawberry.png')
+		const blueberries = require('../../src/images/blueberries.png')
+		const date = Date.now()
+
+		return	(
+			<div className='cache hidden'>
+				<img src={ avocado + '?' + date } />
+				<img src={ orange + '?' + date } />
+				<img src={ strawberry + '?' + date } />
+				<img src={ blueberries + '?' + date } />
+			</div>
+		)
+	}
+
 	render() {
 		return (
 			<div className="app-container">
-			{ this.props.children }
+				{ this.props.children }
+				{ this.cacheModule() }
 			</div>
 		);
 	}

@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 const getFruitPanel = (score) => {
 	let tmpl;
+	const date = Date.now()
+
 	switch(score) {
 		case 1:
 			const avocado = require('../../src/images/avocado.png');
 			tmpl = (
 				<div className='avocado'>
 					<h3>Mir'iam find out that avocado may help you!</h3>
-					<img src={ avocado } />
+					<img src={ avocado + '?' + date } />
 				</div>
 			);
 		break;
@@ -18,7 +20,7 @@ const getFruitPanel = (score) => {
 			tmpl = (
 				<div className='avocado'>
 					<h3>Mir'iam find out that Orange may help!</h3>
-					<img src={ orange } />
+					<img src={ orange + '?' + date } />
 				</div>
 			);
 		break;
@@ -27,7 +29,7 @@ const getFruitPanel = (score) => {
 			tmpl = (
 				<div className='avocado'>
 					<h3>Mir'iam find out that strawberry may help!</h3>
-					<img src={ strawberry } />
+					<img src={ strawberry + '?' + date } />
 				</div>
 			);
 		break;
@@ -36,7 +38,7 @@ const getFruitPanel = (score) => {
 			tmpl = (
 				<div className='avocado'>
 					<h3>Mir'iam find out that blueberries may help!</h3>
-					<img src={ blueberries } />
+					<img src={ blueberries + '?' + date } />
 				</div>
 			);
 		break;
