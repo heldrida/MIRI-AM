@@ -159,6 +159,10 @@ li {
     .home .cta:hover {
       background: #39B608; }
 
+@media (max-width: 768px) {
+  .home .cta {
+    font-size: 1.6em !important; } }
+
 html, body {
   font-size: 2.5vw; }
 
